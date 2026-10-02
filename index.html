@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -33,10 +33,20 @@
       <div class="progress-container">
         <div id="progressBar" class="progress-bar"></div>
       </div>
+      <button type="button" id="resetBtn" class="reset-btn">
+        <i class="fas fa-rotate-left"></i> Reset Count
+      </button>
     </div>
     <div class="container">
       <!-- Feedback message -->
       <p id="greeting"></p>
+
+      <!-- Celebration banner (hidden until goal is reached) -->
+      <div
+        id="celebrationBanner"
+        class="celebration-banner"
+        style="display: none"
+      ></div>
 
       <!-- Check-in form -->
       <form class="check-in" id="checkInForm">
@@ -70,16 +80,26 @@
           <div class="team-card water">
             <span class="team-name">🌊 Team Water Wise</span>
             <span class="team-count" id="waterCount">0</span>
+            <ul class="team-names" id="waterNames"></ul>
           </div>
           <div class="team-card zero">
             <span class="team-name">🌿 Team Net Zero</span>
             <span class="team-count" id="zeroCount">0</span>
+            <ul class="team-names" id="zeroNames"></ul>
           </div>
           <div class="team-card power">
             <span class="team-name">⚡ Team Renewables</span>
             <span class="team-count" id="powerCount">0</span>
+            <ul class="team-names" id="powerNames"></ul>
           </div>
         </div>
+      </div>
+
+      <!-- Attendee list -->
+      <div class="attendee-list-section">
+        <h3>Attendee List</h3>
+        <ul id="attendeeList" class="attendee-list"></ul>
+        <p id="emptyListMsg" class="empty-msg">No attendees checked in yet.</p>
       </div>
     </div>
 
@@ -91,6 +111,9 @@
         >Sustainability Goals</a
       >
     </footer>
+
+    <!-- Confetti container (populated/cleared by script.js) -->
+    <div id="confettiLayer" class="confetti-layer" aria-hidden="true"></div>
 
     <script src="script.js"></script>
   </body>

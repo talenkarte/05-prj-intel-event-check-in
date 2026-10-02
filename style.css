@@ -25,11 +25,12 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(
+  background:
+    linear-gradient(
       135deg,
-      rgba(0, 153, 219, 0.9) 0%,
-      rgba(0, 104, 181, 0.9) 50%,
-      rgba(0, 60, 116, 0.9) 100%
+      rgba(20, 184, 166, 0.9) 0%,
+      rgba(13, 148, 136, 0.9) 50%,
+      rgba(11, 111, 100, 0.9) 100%
     ),
     url("img/bg.jpg");
   background-size: cover;
@@ -65,7 +66,7 @@ body {
   width: 100px;
   height: 3px;
   margin: 26px auto;
-  background-color: #00c7fd;
+  background-color: #2dd4bf;
 }
 
 .hero p {
@@ -83,7 +84,7 @@ body {
   padding: 26px;
   background: white;
   border-radius: 16px;
-  box-shadow: 0 5px 24px rgba(0, 60, 116, 0.07);
+  box-shadow: 0 5px 24px rgba(11, 111, 100, 0.07);
   text-align: center;
 }
 
@@ -119,12 +120,12 @@ input {
 }
 
 input:focus {
-  border-color: #0071c5;
-  box-shadow: 0 0 0 4px rgba(0, 113, 197, 0.15);
+  border-color: #0d9488;
+  box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.15);
 }
 
 button {
-  background-color: #0071c5;
+  background-color: #0d9488;
   color: white;
   border: none;
   border-radius: 12px;
@@ -135,16 +136,16 @@ button {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 113, 197, 0.2);
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 button:hover {
-  background-color: #005a9e;
+  background-color: #0b6f64;
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 113, 197, 0.3);
+  box-shadow: 0 6px 15px rgba(13, 148, 136, 0.3);
 }
 
 #checkInBtn {
@@ -198,14 +199,14 @@ button .fas {
 }
 
 #attendeeCount {
-  color: #0071c5;
+  color: #0d9488;
   font-size: 24px;
   font-weight: 700;
   margin: 0 2px;
 }
 
 .attendance-header i {
-  color: #0071c5;
+  color: #0d9488;
   font-size: 20px;
   margin-right: 4px;
 }
@@ -231,8 +232,8 @@ button .fas {
 .progress-bar {
   width: 0%;
   height: 100%;
-  background-color: #0071c5;
-  background-image: linear-gradient(90deg, #0071c5, #00aeef);
+  background-color: #0d9488;
+  background-image: linear-gradient(90deg, #0d9488, #14b8a6);
   border-radius: 10px;
   transition: width 0.6s ease;
 }
@@ -254,16 +255,8 @@ button .fas {
 }
 
 .success-message {
-  background-color: #e8f4fc;
-  color: #003c71;
-}
-
-/* Counter */
-#attendeeCount {
-  color: #0071c5;
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0 2px;
+  background-color: #e0f7f4;
+  color: #0b6f64;
 }
 
 /* Footer */
@@ -280,7 +273,7 @@ button .fas {
 }
 
 .footer-link:hover {
-  color: #0071c5;
+  color: #0d9488;
   text-decoration: underline;
 }
 
@@ -381,4 +374,158 @@ select {
   .teams-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ---------- Celebration banner ---------- */
+.celebration-banner {
+  background-color: #fff7e0;
+  color: #7a5600;
+  border: 1px solid #f3d98b;
+  font-weight: 600;
+  font-size: 17px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* ---------- Attendee list ---------- */
+.attendee-list-section {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #f1f5f9;
+}
+
+.attendee-list-section h3 {
+  color: #64748b;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.attendee-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 280px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.attendee-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+  background: #f8fafc;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.attendee-name {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.attendee-team {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+  color: white;
+}
+
+.attendee-team.water {
+  background-color: #0d9488;
+}
+.attendee-team.zero {
+  background-color: #10b981;
+}
+.attendee-team.power {
+  background-color: #f59e0b;
+}
+
+.empty-msg {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* ---------- Names listed inside each team card ---------- */
+.team-names {
+  list-style: none;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  text-align: left;
+  font-size: 13px;
+  color: #475569;
+  max-height: 140px;
+  overflow-y: auto;
+}
+
+.team-names li {
+  padding: 3px 0;
+}
+
+.team-names:empty::after {
+  content: "No check-ins yet";
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* ---------- Confetti ---------- */
+.confetti-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -10px;
+  width: 8px;
+  height: 14px;
+  opacity: 0.9;
+  animation-name: confetti-fall;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(105vh) rotate(540deg);
+    opacity: 0.9;
+  }
+}
+
+/* ---------- Reset button ---------- */
+.reset-btn {
+  margin-top: 14px;
+  min-width: 0;
+  width: auto;
+  height: auto;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: transparent;
+  color: #64748b;
+  border: 1px solid #cbd5e1;
+  box-shadow: none;
+}
+
+.reset-btn:hover {
+  background-color: #f1f5f9;
+  color: #0d9488;
+  border-color: #0d9488;
+  transform: none;
+  box-shadow: none;
 }
